@@ -91,7 +91,7 @@ public class PersonaDetalleViewController {
         TablePosition<Persona, String> pos = new TablePosition<>(tableViewPrevio, numFilaSeleccionada, null);
         tableViewPrevio.getFocusModel().focus(pos);
         tableViewPrevio.requestFocus();
-        volverAgenda();
+        formerView();
     }
 
     @javafx.fxml.FXML
@@ -174,10 +174,10 @@ public class PersonaDetalleViewController {
             }
         }
 
-        volverAgenda();
+        formerView();
     }
 
-    private void volverAgenda() {
+    private void formerView() {
         StackPane rootMain = (StackPane) rootPersonaDetalleView.getScene().getRoot();
         rootMain.getChildren().remove(rootPersonaDetalleView);
         rootAgendaView.setVisible(true);
